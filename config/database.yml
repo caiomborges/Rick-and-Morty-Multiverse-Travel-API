@@ -1,0 +1,19 @@
+defaults : &defaults
+  host: 172.17.0.1
+  user: postgres
+  password: "1234"
+  migration_files_path: ./db/migrations
+  adapter: postgres
+  docker_container: postgres
+
+development:
+  db: jennifer_develop
+  <<: *defaults
+
+test:
+  db: jennifer_test
+  <<: *defaults
+
+production:
+  db: jennifer_prod
+  <<: *defaults

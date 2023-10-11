@@ -1,0 +1,24 @@
+name: api
+version: 0.1.0
+
+authors:
+  - Caio Moraes Borges <caio298@hotmail.com>
+
+targets:
+  api:
+    main: api.cr
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+  jennifer:
+    github: imdrasil/jennifer.cr
+    version: "~> 0.13.0"
+  pg:
+    github: will/crystal-pg
+    version: "= 0.26.0"
+  sam:
+    github: imdrasil/sam.cr
+    version: 0.5.0
+
+license: MIT

@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:14.9
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=1234
+  api:
+    build: .
+    ports:
+      - 3000:3000
+    command: sh init.sh
